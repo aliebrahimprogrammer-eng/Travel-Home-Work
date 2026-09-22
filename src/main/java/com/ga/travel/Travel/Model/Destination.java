@@ -1,7 +1,11 @@
 package com.ga.travel.Travel.Model;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 public class Destination {
 
+    @JsonIgnore
     public Destination(int id, String name, String country, String continent, String category, double rating, String priceLevel, String description) {
         this.id = id;
         this.name = name;
@@ -11,6 +15,10 @@ public class Destination {
         this.rating = rating;
         this.priceLevel = priceLevel;
         this.description = description;
+    }
+
+    @JsonCreator
+    public Destination() {
     }
 
     public int getId() {
