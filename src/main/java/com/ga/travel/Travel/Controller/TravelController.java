@@ -111,7 +111,7 @@ public class TravelController {
     }
 
     @GetMapping("/destinations/{id}")
-    public ResponseEntity<?> getDestination(@PathVariable Long id) {
+    public ResponseEntity<?> getDestination(@PathVariable int id) {
 
         for (Destination destination : destinations) {
 
